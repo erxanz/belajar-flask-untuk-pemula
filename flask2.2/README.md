@@ -1,7 +1,12 @@
 ### Template dengan Jinja2
-
 #### Apa itu Jinja2?
 Jinja2 adalah engine template yang digunakan Flask untuk memisahkan logika aplikasi dengan tampilan HTML. Anda bisa memasukkan data Python ke dalam HTML menggunakan sintaks Jinja2.
+
+---
+
+### Static Files
+#### Apa itu Static Files?
+Static files adalah file yang tidak berubah selama runtime aplikasi, seperti CSS, JavaScript, atau gambar.
 
 ---
 
@@ -10,6 +15,9 @@ Jinja2 adalah engine template yang digunakan Flask untuk memisahkan logika aplik
 my_flask_app/
 │
 ├── app.py
+├── static/
+│   ├── styles.css
+│   └── logo.png
 └── templates/
     ├── base.html
     ├── home.html
@@ -54,10 +62,12 @@ if __name__ == '__main__':
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <title>{{ title }}</title>
 </head>
 <body>
     <header>
+        <img src="{{ url_for('static', filename='img/kopi.png') }}" alt="kopi" width="50" height="50">
         <nav>
             <a href="/">Home</a> | <a href="/profile">Profile</a>
         </nav>
@@ -109,4 +119,68 @@ if __name__ == '__main__':
 
 **Dynamic data:**
 - Variabel `user` di `app.py` dikirim ke template `profile.html` untuk ditampilkan.
+
+---
+
+#### Kode untuk Static Files:
+
+**File `static/styles.css`:**
+```css
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+header nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #007BFF;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+```
+
+**Ubah File `templates/base.html`:**
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/">Home</a> | <a href="/profile">Profile</a>
+        </nav>
+    </header>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+</body>
+</html>
+```
+
+---
+
+#### Menampilkan Gambar (Opsional):
+Tambahkan file gambar `kopi.png` ke folder `static/` dan tambahkan di `base.html`:
+
+```html
+<header>
+    <img src="{{ url_for('static', filename='img/logo.png') }}" alt="Logo" width="50" height="50">
+    <nav>
+        <a href="/">Home</a> | <a href="/profile">Profile</a>
+    </nav>
+</header>
+```
+
+
 
