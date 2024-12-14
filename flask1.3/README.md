@@ -1,9 +1,9 @@
 # Dokumentasi Dasar-Dasar Flask Part-3
-## Menambahkan CSS untuk Tampilan
+## Menambahkan HTML dan CSS untuk Tampilan
 
 ---
 
-### Struktur Folder Baru
+### Struktur Folder
 
 ```plaintext
 my_flask_app/
@@ -33,6 +33,44 @@ p {
 }
 ```
 
+### File `templates/home.html`:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Home | Flask</title>
+</head>
+<body>
+    <h1>Halaman Home</h1>
+    <p>Ini adalah aplikasi pertama saya</p>
+    <a href="{{ url_for('about') }}">about</a>
+</body>
+</html>
+```
+
+### File `templates/about.html`:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>About | Flask</title>
+</head>
+<body>
+    <h1>Halaman About</h1>
+    <p>Selamat datang di halaman about flask</p>
+    <a href="{{ url_for('home') }}">home</a>
+</body>
+</html>
+```
+
 ### Ubah Routing di `app.py`:
 
 ```python
@@ -54,25 +92,6 @@ def about():
 # Menjalankan aplikasi Flask
 if __name__ == '__main__':
     app.run(debug=True, port=8000)
-```
-
-### File `templates/home.html`:
-
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    <title>My Flask App</title>
-</head>
-<body>
-    <h1>Halaman Home</h1>
-    <p>Ini adalah aplikasi pertama saya</p>
-    <a href="{{ url_for('about') }}">about</a>
-</body>
-</html>
 ```
 
 ---
