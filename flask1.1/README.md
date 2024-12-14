@@ -1,6 +1,4 @@
-# Dokumentasi Dasar-Dasar Flask versi 3
-
-Selamat datang di panduan dasar Flask! Dokumentasi ini akan membantu Anda memahami langkah-langkah untuk memulai dengan Flask, termasuk membuat aplikasi "Hello World" pertama Anda. Mari kita mulai!
+# Dokumentasi Dasar-Dasar Flask versi^3 Part-1
 
 ---
 
@@ -62,7 +60,7 @@ def home():
 
 # Menjalankan aplikasi Flask
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, port=8000, host='127.0.0.1')
 ```
 
 ### Penjelasan Kode:
@@ -99,14 +97,12 @@ if __name__ == '__main__':
 
 2. Buka browser dan akses URL berikut:
    ```
-   http://127.0.0.1:5000/
+   http://127.0.0.1:8000/
    ```
 
 3. Anda akan melihat pesan berikut:
    ```plaintext
-   Hello, World! Ini aplikasi Flask pertamaku!
+   Hello, World!, Uji Coba Flask Pertama
    ```
 
 ---
-
-### Selesai
