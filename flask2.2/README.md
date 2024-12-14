@@ -16,8 +16,8 @@ my_flask_app/
 │
 ├── app.py
 ├── static/
-│   ├── styles.css
-│   └── logo.png
+│   ├── css/styles.css
+│   └── img/logo.png
 └── templates/
     ├── base.html
     ├── home.html
