@@ -1,10 +1,8 @@
-# Dokumentasi Dasar-Dasar Flask versi^3 Part-1
+# Dokumentasi Dasar-Dasar Flask V^3
 
----
+## 1. Struktur Folder Sederhana
 
-## 1. Struktur Proyek Sederhana
-
-Susun direktori proyek Anda dengan struktur berikut:
+Susun direktori folder Anda dengan struktur berikut:
 
 ```plaintext
 my_flask_app/

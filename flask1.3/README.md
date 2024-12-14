@@ -1,7 +1,4 @@
-# Dokumentasi Dasar-Dasar Flask Part-3
 ## Menambahkan HTML dan CSS untuk Tampilan
-
----
 
 ### Struktur Folder
 

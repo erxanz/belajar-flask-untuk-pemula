@@ -5,7 +5,7 @@ Jinja2 adalah engine template yang digunakan Flask untuk memisahkan logika aplik
 
 ---
 
-#### Struktur Proyek:
+#### Struktur Folder:
 ```
 my_flask_app/
 │

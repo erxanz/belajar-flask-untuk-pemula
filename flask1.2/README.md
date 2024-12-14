@@ -1,10 +1,6 @@
-# Dokumentasi Dasar-Dasar Flask Part-2
+## 1. Struktur Folder Flask
 
----
-
-## 1. Struktur Proyek Flask
-
-Buat struktur proyek yang rapi:
+Buat struktur older yang rapi:
 
 ```plaintext
 my_flask_app/

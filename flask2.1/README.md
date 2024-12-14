@@ -1,7 +1,4 @@
-# Dokumentasi Dasar-Dasar Flask
 ## Routing dan Views
-
----
 
 ### Apa itu Routing?
 Routing adalah proses menghubungkan URL dengan fungsi tertentu di aplikasi Flask. Setiap route memiliki path unik yang digunakan untuk mengakses halaman tertentu.
