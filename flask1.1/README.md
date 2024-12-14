@@ -2,36 +2,7 @@
 
 ---
 
-## 1. Instalasi Flask
-
-### Persyaratan:
-- Pastikan Python sudah terinstal di komputer Anda (minimal versi 3.7).
-
-### Langkah-Langkah:
-
-1. **Buat Virtual Environment** *(opsional, tapi direkomendasikan)*:
-   ```bash
-   python -m venv env
-   ```
-
-2. **Aktifkan Virtual Environment**:
-   - **Windows**:
-     ```bash
-     .\env\Scripts\activate
-     ```
-   - **macOS/Linux**:
-     ```bash
-     source env/bin/activate
-     ```
-
-3. **Instal Flask**:
-   ```bash
-   pip install flask
-   ```
-
----
-
-## 2. Struktur Proyek Sederhana
+## 1. Struktur Proyek Sederhana
 
 Susun direktori proyek Anda dengan struktur berikut:
 
@@ -43,7 +14,7 @@ my_flask_app/
 
 ---
 
-## 3. Membuat Aplikasi Flask Pertama
+## 2. Membuat Aplikasi Flask Pertama
 
 ### Kode di `app.py`:
 
@@ -63,7 +34,7 @@ if __name__ == '__main__':
     app.run(debug=True, port=8000, host='127.0.0.1')
 ```
 
-### Penjelasan Kode:
+### 3. Penjelasan Kode:
 
 1. **`from flask import Flask`**
    - Mengimpor kelas Flask untuk digunakan membuat aplikasi web.
